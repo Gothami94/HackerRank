@@ -1,0 +1,28 @@
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 650px}
+
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.box{
+
+    background-image:url("../image/letter.jpg") ;
+    width:800px;
+
+}
