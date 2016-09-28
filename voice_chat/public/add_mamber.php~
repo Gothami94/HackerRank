@@ -1,0 +1,73 @@
+<?php include("../includes/functions.php");?>
+
+<?php echo db_connect(); 
+global $connection;
+?>
+
+<?php
+if (isset($_POST['Sign'])){
+	$First_Name=$_POST['First_Name'];
+	$Last_Name=$_POST['Last_Name'];
+	$Email=mysqli_real_escape_string($_POST['Email']);
+	$Country=$_POST['Country'];
+	$Gender=$_POST['Gender'];
+	$Date_of_Birth=$_POST['Date_of_Birth'];
+	$Image="No";
+	$Reg_Date=date("y-m-d");
+	$Last_login=date("y-m-d");
+	$Status="not yet";
+	$Password=mysqli_real_escape_string($_POST['Password']);
+	$get_mail_query="SELECT * FROM User WHERE Email='$Email' ";
+	$result_check_mail=mysqli_query($connection,$get_mail_query);
+	if(mysqli_num_rows($result_check_mail)==1){
+		$_SESSION["Message"]= "This Email already exists";
+		redirect_to("Error_Ditect_Page.php");
+	}
+	else{
+		$add_member_query="INSERT INTO User ( ";
+		$add_member_query.="User_First_Name, ";
+		$add_member_query.="User_Last_Name, ";
+		$add_member_query.="Email, ";
+		$add_member_query.="Country, ";
+		$add_member_query.="Gender, ";
+		$add_member_query.="Date_of_Birth, ";
+		$add_member_query.="Image, ";
+		$add_member_query.="Reg_Date, ";
+		$add_member_query.="Last_login, ";
+		$add_member_query.="Status, ";
+		$add_member_query.="Password ) ";
+		$add_member_query.="VALUES ( ";
+		$add_member_query.="'$First_Name', ";
+		$add_member_query.="'$Last_Name', ";
+		$add_member_query.="'$Email', ";
+		$add_member_query.="'$Country', ";
+		$add_member_query.="$Gender, ";
+		$add_member_query.="'$Date_of_Birth', ";
+		$add_member_query.="'$Image', ";
+		$add_member_query.="'$Reg_Date', ";
+		$add_member_query.="'$Last_login', ";
+		$add_member_query.="'$Status', ";
+		$add_member_query.="'$Password' ";
+		$add_member_query.=") ";
+		
+		$result_add_member=mysqli_query($connection,$add_member_query);
+		
+		if(!$result_add_member){
+			$_SESSION["Message"]= "Add member fail";
+			redirect_to("Error_Ditect_Page.php");
+		}
+		else{
+			$_SESSION["Message"]=  "Welcome to the VoiChat ". $First_Name;
+			redirect_to("My_Account.php");
+		}
+	}
+	
+
+
+}
+
+?>
+
+
+<?php echo db_close(); ?>
+

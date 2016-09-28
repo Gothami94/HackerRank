@@ -1,0 +1,29 @@
+<?php require_once("../includes/login_header.php");?>
+
+
+<body bgcolor="#DB7093">
+
+<div class="login">
+<form action="add_mamber.php" method="post">
+First Name:  <input name="First_Name" type="text" value="" placeholder="First Name"/><br/>
+Last Name:   <input name="Last_Name" type="text" value="" placeholder="Last Name"/><br/>
+Last Name:   <input name="Password" type="password" value="" placeholder="password"/><br/>
+Email:       <input name="Email" type="Email" value="" placeholder="Email"/><br/>
+Country:     <select name="Country" >
+		<option>Select a Country</option>
+		<option>Sri Lanka</option>
+		<option>India</option>
+		<option>USA</option>
+	</select>
+<br/>
+Date of Birth:<input name="Date_of_Birth" type="date" value="" placeholder="yyyy-mm-dd"/><br/>
+Gender:</br>
+<input name="Gender" type="radio" value="1"/>Male<br/>
+<input name="Gender" type="radio" value="0"/>Female<br/>
+<button name="Sign" >Sign In</button>
+
+</form>
+</div>
+
+</body>
+</html>

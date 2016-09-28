@@ -1,0 +1,6 @@
+<?php require_once("../includes/header.php");?>
+
+<div id="navigation">
+<b>Home</b>
+</div> 
+</html>
