@@ -5,7 +5,10 @@
 ###algo3,group projct,SE2,pro3,networking1,
 ###OS1,MM3,pro4,db2,PLC,lab2,automata
 
-grade=['A','-A','+C','-B','+B','B','A','-B','-A','+A','A','-A','B','B','A','-A','-A','A','A','+B','A','-A','A','A','+B']
+grade=['A','A','-B','B','B','B','-A','-A','A','+A','+A','B','-A','+B','A','+B','+A','A','+A','+A','A','-A','A','A','A']
+
+#grade=['A','-A','+C','-B','+B','B','A','-B','-A','+A','A','-A','B','B','A','-A','-A','A','A','+B','A','-A','A','A','+B']
+
 #print(len(grade))
 
 credit=[3,3,3,2,2,2,2,2,3,2,2,2,2,2,4,2,3,3,3,2,3,2,2,2,2]
