@@ -1,3 +1,10 @@
+###to calculate GPA
+
+###algo1,pro1,db1,MM1,CS,lab1,
+###SE1,algo2,pro2,discrete m,MM2,FCS,stat,
+###algo3,group projct,SE2,pro3,networking1,
+###OS1,MM3,pro4,db2,PLC,lab2,automata
+
 grade=['A','-A','+C','-B','+B','B','A','-B','-A','+A','A','-A','B','B','A','-A','-A','A','A','+B','A','-A','A','A','+B']
 #print(len(grade))
 
