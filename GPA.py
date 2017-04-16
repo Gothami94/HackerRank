@@ -68,5 +68,8 @@ for i in range(num):
         gpv=0.00*c
         z=z+gpv
 
+GPA=float(z/tot)
 
+#print(count)
+print(GPA)
         
