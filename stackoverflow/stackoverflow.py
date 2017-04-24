@@ -1,7 +1,7 @@
 #This is for filter out top 2 valuable items from each category
 
 #a=[[item,count],....]
-a=[['electronic kettle',3],['plate',7],['fan',2],['plate',3],['fan',5],['fan',1],['electronic kettle',6],['plate',6],['electronic kettle',9],['plate',2]]
+a=[['electronic kettle',3],['bed',1],['plate',7],['fan',2],['plate',3],['bed',12],['fan',5],['fan',1],['electronic kettle',6],['plate',6],['electronic kettle',9],['plate',2],['bed',3]]
 
 for i in range(len(a)):
 	item=a[0][0]
